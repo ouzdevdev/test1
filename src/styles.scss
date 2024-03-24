@@ -1,0 +1,33 @@
+// /* You can add global styles to this file, and also import other style files */
+// @import "primeicons/primeicons.css";
+
+// /* Importing Bootstrap SCSS file. */
+// @import 'bootstrap/scss/bootstrap';
+
+
+// body {
+//   margin: 0;
+//   padding: 0;
+//   line-height: 1.6;
+//   word-spacing: 1.4px;
+//   font-family: 'Roboto', sans-serif;
+//   background-color: var(--clr-light);
+//   color: var(--clr-dark);
+// }
+// *,
+// *::before,
+// *::after {
+//   box-sizing: border-box;
+// }
+
+:root {
+  --clr-dark: #070a12;
+  --clr-light: #f1f5f9;
+  --clr-accent: #e11d48;
+  --clr-lightRose: #fb7185;
+  --clr-green: #4ade80;
+  --clr-sky: #38bdf8;
+  --clr-pink: #f472b6;
+  --clr-violet: #a78bfa;
+  --clr-yellow: #facc15;
+}

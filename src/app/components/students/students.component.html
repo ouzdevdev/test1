@@ -1,0 +1,62 @@
+<div class="container" >
+  <div *ngIf="students.length > 0">
+    <h2>Students</h2>
+    <ul class="list-group " >
+      <li *ngFor="let student of students" class="list-group-item" style="background-color: grey;">
+        <p><strong>Name:</strong> {{ student.name }}</p>
+        <p><strong>Email:</strong> {{ student.email }}</p>
+        <p><strong>Age:</strong> {{ student.age }}</p>
+        <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
+        <p><strong>First exam:</strong> {{ student.n1 }}</p>
+        <p><strong>Second exam:</strong> {{ student.n2 }}</p>
+        <p><strong>Third exam:</strong> {{ student.n3 }}</p>
+        <p><strong>Finale mark:</strong> {{ student.mg }}</p>
+        <p><strong>Matiere:</strong> {{ student.matiere }}</p>
+        <p><strong>V:</strong> {{ student.valid }}</p>
+      </li>
+
+    </ul>
+
+
+<form (ngSubmit)="fetchCountMatiere()">
+  <div >
+    <label for="matiere">Matiere:</label>
+    <input type="text" id="matiere" name="matiere" required [(ngModel)]="matiere" (keydown.enter)="fetchCountMatiere()">
+  </div>
+
+</form>
+
+
+
+
+<div class="d-flex justify-content-center">
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-right: 10px;">
+    <h5 class="card-title text-center">Student Count</h5>
+    <hr> <!-- Add a horizontal line -->
+    <div class="card-body">
+      <p class="card-text text-center">{{count}}</p>
+    </div>
+  </div>
+
+  <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-left: 10px;">
+    <h5 class="card-title text-center">Validation Par Matiere</h5>
+    <hr> <!-- Add a horizontal line -->
+   <div class="card-body">
+  <ng-container *ngIf="countMatiereP !== undefined">
+    <p class="card-text text-center">{{ countMatiereP }} %</p>
+  </ng-container>
+  <ng-container *ngIf="countMatiereP === undefined">
+    <i class="pi pi-spin pi-spinner" style="font-size: 2rem; margin-left: 40%;"></i>
+  </ng-container>
+</div>
+
+</div>
+
+
+
+
+  </div>
+  <div *ngIf="students.length === 0">
+    <p class="alert alert-info">No students found.</p>
+  </div>
+</div>

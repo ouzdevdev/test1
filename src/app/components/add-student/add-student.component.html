@@ -1,0 +1,37 @@
+<form (submit)="addStudent()">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required [(ngModel)]="student.name">
+  </div>
+  <div>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required [(ngModel)]="student.email">
+  </div>
+  <div>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" required [(ngModel)]="student.age">
+  </div>
+  <div>
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required [(ngModel)]="student.dob">
+  </div>
+  <div>
+    <label for="n1">N1:</label>
+    <input type="number" id="n1" name="n1" required [(ngModel)]="student.n1">
+  </div>
+  <div>
+    <label for="n2">N2:</label>
+    <input type="number" id="n2" name="n2" required [(ngModel)]="student.n2">
+  </div>
+  <div>
+    <label for="n3">N3:</label>
+    <input type="number" id="n3" name="n3" required [(ngModel)]="student.n3">
+  </div>
+
+  <div>
+    <label for="matiere">Matiere:</label>
+    <input type="text" id="matiere" name="matiere" required [(ngModel)]="student.matiere">
+  </div>
+
+  <button type="submit">Submit</button>
+</form>
