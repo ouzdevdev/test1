@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mmmm</title>
+
+</head>
+<body>
+  <div id="main">
+    <div class="container">
+      <nav>
+        <img src="../../../assets/Nature Website/img/logo.png" alt="" class="logo">
+        <ul class="nav-list" [class.active]="isActive" >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><button class="btn btn-secondary">202-505-302</button></li>
+        </ul>
+        <img src="../../../assets/Nature Website/img/menu.svg" alt="" class="menu-btn" (click)="toggle()">
+      </nav>
+      <div class="main-content">
+        <h1 class="intro-heading">we all love </h1>
+        <h1 class="main-heading">nature</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit.
+          Vero quod assumenda minima maiores tenetur sunt, totam iure sint provident veritatis,
+          nobis molestias? Eligendi omnis fuga quo, id quaerat nobis cum.
+        </p>
+        <button class="btn btn-primary">Get Started</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-title">
+        <h1>Our Services</h1>
+        <div class="line"></div>
+      </div>
+      <div class="services">
+        <div class="service">
+          <img src="../../../assets/Nature Website/img/service-1.png" alt="">
+          <h3>Web Design</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt nam facere id saepe harum ab,
+            beatae laboriosam reprehenderit laudantium fugit quia explicabo facilis consequatur, voluptatum, autem quos.
+            Atque, nemo? Porro.</p>
+        </div>
+
+        <div class="service">
+          <img src="../../../assets/Nature Website/img/service-2.png" alt="">
+          <h3>Graphic Design</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis magnam eum atque esse sapiente iste numquam?
+            Id, praesentium! Omnis blanditiis aliquam earum odio. Dicta ut, provident excepturi deleniti veniam exercitationem!</p>
+        </div>
+
+        <div class="service">
+          <img src="../../../assets/Nature Website/img/service-3.png" alt="">
+          <h3>Content Creation</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Alias tenetur accusantium consequatur non unde veniam nulla?
+            Quidem vel cum cumque quam dolorum, totam rerum architecto autem debitis delectus repellat deleniti?</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="testimonial">
+    <div class="container">
+      <div class="quote">
+        <img src="../../../assets/Nature Website/img/quote.png" alt="" >
+        <p> ''Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam officia ea reprehenderit aspernatur
+          fugit molestiae voluptatum voluptatem, obcaecati velit accusamus rem qui quidem, iusto cumque reiciendis. Dolore, cumque ipsam? Eveniet hhhhhhhhhhhhhhhhhhaaa.''
+        </p>
+      </div>
+      <div class="profile">
+        <img src="../../../assets/Nature Website/img/profile.png" alt="">
+        <h4>Jane Miller</h4>
+      </div>
+    </div>
+  </section>
+
+  <section id="about-us">
+    <div class="container">
+      <div class="aboutus-Content">
+          <div class="about-content">
+            <h4>ABOUT US</h4>
+            <p class="pTagAboutUs">
+              Tell Our website visitors who you are and why they should choose your buisness
+            </p>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Est, suscipit doloremque pariatur consectetur quae quibusdam minus,
+              modi quas vero dolorum illum excepturi tenetur debitis dolorem facere nihil
+              provident, doloribus numquam.
+            </p>
+            <button class="btn btn-primary">Let's Talk Now</button>
+          </div>
+          <div class="about-image">
+            <img src="../../../assets/Nature Website/img/about.png" alt="">
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="questions">
+    <div class="container">
+      <div class="questions-container">
+        <h1>QUESTIONS ?</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, ipsum.
+          Sequi nihil quidem rem nisi odio officia culpa libero, commodi dicta laudantium dolore quae
+          iure dolor soluta eum quod rerum.
+        </p>
+        <button class="btn btn-primary">Let's Talk Now</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="footer">
+
+    <div class="container">
+      <footer>
+        <ul class="footer-links" [class.active]="isActive" >
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      <div style="display: flex; flex-direction: row; align-items: center; gap: 40px;">
+          <img src="../../../assets/Nature Website/img/logo-colored.png"  alt="" class="footerLogo">
+
+          <p>Love Nature</p>
+      </div>
+      </footer>
+      <img src="../../../assets/Nature Website/img/menu.svg" alt="" class="footer-btn" (click)="toggle()">
+    </div>
+
+  </section>
+</body>
+</html>

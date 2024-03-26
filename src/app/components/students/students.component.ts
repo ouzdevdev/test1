@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { StudentsService } from '../../services/students.service';
-import { Student } from '../../modules/student'; // Assuming you have a Student model
 
 @Component({
   selector: 'app-students',
@@ -8,10 +7,10 @@ import { Student } from '../../modules/student'; // Assuming you have a Student 
   styleUrls: ['./students.component.scss']
 })
 export class StudentsComponent implements OnInit {
-  students: Student[] = [];
-  count !:number;
-  countMatiereP !:number;
-  matiere!:string;
+  students: any;
+  count !:any;
+  countMatiereP !:any;
+  matiere!:any;
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {

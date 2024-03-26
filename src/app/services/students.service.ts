@@ -13,8 +13,8 @@ export class StudentsService {
   constructor(private http: HttpClient) { }
 
   // GET request to fetch all students
-  getAllStudents(): Observable<Student[]> {
-    return this.http.get<Student[]>(this.baseUrl);
+  getAllStudents(): Observable<any> {
+    return this.http.get<any>(this.baseUrl);
   }
 
   // POST request to add a new student

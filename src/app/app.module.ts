@@ -12,15 +12,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentsService } from './services/students.service'; // Import StudentsService
 import { HttpClientModule } from '@angular/common/http';
 import { TrainComponent } from './components/train/train.component';
-import { MapsComponent } from './maps/maps.component'; // Import HttpClientModule
-
-// Define your routes
-const routes: Routes = [
-  { path: 'students', component: StudentsComponent },
-  { path: 'add-student', component: AddStudentComponent },
-  { path: 'update-student/:id', component: UpdateStudentComponent },
-  { path: '', redirectTo: '/students', pathMatch: 'full' } // Redirect to students component by default
-];
+import { MapsComponent } from './maps/maps.component';
+import { ResponsiveComponent } from './components/responsive-tuto/responsive-tuto.component'; // Import HttpClientModule
 
 @NgModule({
   declarations: [
@@ -29,7 +22,8 @@ const routes: Routes = [
     AddStudentComponent,
     UpdateStudentComponent,
     TrainComponent,
-    MapsComponent
+    MapsComponent,
+    ResponsiveComponent
   ],
   imports: [
     BrowserModule,
