@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-responsive-tuto',
@@ -9,12 +10,18 @@ export class ResponsiveComponent  implements OnInit  {
 
   // nav:boolean=false;
   isActive:boolean=false;
+  isActive2:boolean=false;
   ngOnInit(){
   }
     toggle(){
       this.isActive=!this.isActive;
     }
     printTooHatim(){
-    alert("ssir t7wa la ?")
+    window.confirm(" ssir t7wa la ?");
+
+    }
+
+toggle2(){
+      this.isActive2=!this.isActive2;
     }
 }

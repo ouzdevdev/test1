@@ -72,7 +72,7 @@ footer{
   // border: solid;
 }
 
-section{
+section:not(:last-child){
   margin: 80px auto;
 }
   .pTagAboutUs{
@@ -89,7 +89,7 @@ section{
 
   .container{
     min-width: 264px;
-    border: solid;
+    // border: solid;
   }
   .menu-btn{
     display: block;
@@ -204,6 +204,26 @@ section{
 .questions-container{
   overflow: hidden;
 }
+#footer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: gray;
+  height: 23vh;
+  background-image: url("../../../assets/Nature Website/img/main.png");
+  background-position: bottom center;
+  background-size: cover;
+
+
+}
+footer{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  // position: inherit;
+  // top: 500px;
+  // border: solid;
+}
 .footer-links li a{
   color: white;
   padding: 20px;
@@ -216,14 +236,22 @@ section{
   gap: 50px;
 }
 .footer-btn{
-  position:inherit;
+  // position:inherit;
   display: flex;
-  width: 100%;
   width: 50px;
-  background-color: black;
-  left: 1000px;
+  background-color: transparent;
+  left:-500px;
   bottom: 0px;
   border-radius: 5px;
+  z-index: 1;
+  // border: solid;
+}
+.btnfooteer{
+  display: flex;
+  // width: 100%;
+  left: 50px;
+  // border: solid;
+  // margin-bottom: 0px;
 }
 
 
@@ -233,11 +261,14 @@ section{
   flex-direction: column;
   justify-content: center;
   background-color: gray;
+  padding: 10px;
   gap: 40px;
-  right: 0;
-  // bottom: -2360px;
+  left: -20px;
+  bottom: -2550px;
   width: 100%;
   height: 50vh;
+  transition:  all 0.5s ease-in-out;
+  border-radius: 5px;
 }
 
 .section-title{
@@ -249,22 +280,26 @@ section{
   font-size: 20px;
 }
 .footer-img{
-  width: 100%;
-  border: solid;
+  width: 200%;
   display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  border: solid;
 }
-.footer-img img{
-  z-index: 1;
-}
+
 .ul-list{
   width: 100%;
   border: solid;
   display: flex;
   position: relative;
   bottom: 0%;
+}
+
+.container2{
+  width: 100%;
+  // border: solid;
 }
 }
 
