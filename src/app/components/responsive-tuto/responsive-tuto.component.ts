@@ -14,4 +14,7 @@ export class ResponsiveComponent  implements OnInit  {
     toggle(){
       this.isActive=!this.isActive;
     }
+    printTooHatim(){
+    alert("ssir t7wa la ?")
+    }
 }
