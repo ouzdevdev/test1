@@ -89,7 +89,7 @@ section{
 
   .container{
     min-width: 264px;
-    // border: solid;
+    border: solid;
   }
   .menu-btn{
     display: block;
@@ -216,12 +216,13 @@ section{
   gap: 50px;
 }
 .footer-btn{
-  position:absolute;
+  position:inherit;
+  display: flex;
   width: 100%;
   width: 50px;
   background-color: black;
-  right: 10px;
-  bottom: -2130px;
+  left: 1000px;
+  bottom: 0px;
   border-radius: 5px;
 }
 
@@ -234,9 +235,9 @@ section{
   background-color: gray;
   gap: 40px;
   right: 0;
-  bottom: -2360px;
-  width: 250px;
-  height: 40vh;
+  // bottom: -2360px;
+  width: 100%;
+  height: 50vh;
 }
 
 .section-title{
@@ -246,6 +247,24 @@ section{
   align-items: center;
   justify-content: center;
   font-size: 20px;
+}
+.footer-img{
+  width: 100%;
+  border: solid;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 20px;
+}
+.footer-img img{
+  z-index: 1;
+}
+.ul-list{
+  width: 100%;
+  border: solid;
+  display: flex;
+  position: relative;
+  bottom: 0%;
 }
 }
 
