@@ -17,7 +17,7 @@ export class ResponsiveComponent  implements OnInit  {
       this.isActive=!this.isActive;
     }
     printTooHatim(){
-    window.confirm(" ssir t7wa la ?");
+    window.confirm("this is a responsive design tutorial made by Anas");
 
     }
 
