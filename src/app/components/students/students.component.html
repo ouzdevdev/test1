@@ -1,25 +1,32 @@
 <div class="container" >
   <div *ngIf="students.length > 0">
-    <h2>Students</h2>
-    <ul class="list-group " >
-      <li *ngFor="let student of students" class="list-group-item" style="background-color: grey;">
-        <p><strong>Name:</strong> {{ student.name }}</p>
-        <p><strong>Email:</strong> {{ student.email }}</p>
-        <p><strong>Age:</strong> {{ student.age }}</p>
-        <p><strong>Date of Birth:</strong> {{ student.dob }}</p>
-        <p><strong>First exam:</strong> {{ student.n1 }}</p>
-        <p><strong>Second exam:</strong> {{ student.n2 }}</p>
-        <p><strong>Third exam:</strong> {{ student.n3 }}</p>
-        <p><strong>Finale mark:</strong> {{ student.mg }}</p>
-        <p><strong>Matiere:</strong> {{ student.matiere }}</p>
-        <p><strong>V:</strong> {{ student.valid }}</p>
-      </li>
+    <div class="title">
+        <h2>Students</h2>
+    </div>
+
+    <ul >
+      <div class="list">
+          <li *ngFor="let student of students" class="list-group-item" style="background-color: grey; border-radius: 5px; padding: 10px;">
+            <div class="p-group"> <h2 class="title-li">Reference:</h2><p> {{ student.id }}</p></div>
+            <div class="p-group"><h2 class="title-li">Name:</h2><p> {{ student.name }}</p></div>
+            <div class="p-group"> <h2 class="title-li">Email:</h2><p> {{ student.email }}</p></div>
+            <div class="p-group"><h2 class="title-li">Age:</h2><p> {{ student.age }}</p></div>
+            <div class="p-group"><h2 class="title-li">DOB:</h2><p> {{ student.dob }}</p></div>
+            <div class="p-group"><h2 class="title-li">First exam:</h2><p> {{ student.n1 }}</p></div>
+            <div class="p-group"><h2 class="title-li">Second exam:</h2><p> {{ student.n2 }}</p></div>
+            <div class="p-group"><h2 class="title-li">Third exam:</h2><p> {{ student.n3 }}</p></div>
+            <div class="p-group"><h2 class="title-li">Finale mark:</h2><p> {{ student.mg }}</p></div>
+            <div class="p-group"><h2 class="title-li">Matiere:</h2><p> {{ student.matiere }}</p></div>
+            <div class="p-group"><h2 class="title-li">Validation: </h2><p>{{ student.valid }}</p></div>
+          </li>
+      </div>
+
 
     </ul>
+</div>
 
-
-<form (ngSubmit)="fetchCountMatiere()">
-  <div >
+<form class="add-form" (ngSubmit)="fetchCountMatiere()">
+  <div class="form-matiere">
     <label for="matiere">Matiere:</label>
     <input type="text" id="matiere" name="matiere" required [(ngModel)]="matiere" (keydown.enter)="fetchCountMatiere()">
   </div>
@@ -29,34 +36,37 @@
 
 
 
-<div class="d-flex justify-content-center">
-  <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-right: 10px;">
-    <h5 class="card-title text-center">Student Count</h5>
-    <hr> <!-- Add a horizontal line -->
-    <div class="card-body">
-      <p class="card-text text-center">{{count}}</p>
-    </div>
-  </div>
 
-  <div class="card text-white bg-dark mb-3" style="max-width: 18rem; margin-left: 10px;">
-    <h5 class="card-title text-center">Validation Par Matiere</h5>
-    <hr> <!-- Add a horizontal line -->
-   <div class="card-body">
-  <ng-container *ngIf="countMatiereP !== undefined">
-    <p class="card-text text-center">{{ countMatiereP }} %</p>
-  </ng-container>
-  <ng-container *ngIf="countMatiereP === undefined">
-    <i class="pi pi-spin pi-spinner" style="font-size: 2rem; margin-left: 40%;"></i>
-  </ng-container>
-</div>
-
-</div>
-
-
-
-
-  </div>
   <div *ngIf="students.length === 0">
     <p class="alert alert-info">No students found.</p>
   </div>
+
+
+
+<footer>
+
+  <div class="Student-Count">
+    <h5 >Student Count</h5>
+    <div class="underline"></div>
+    <div>
+      <p class="noRes">{{count}}</p>
+    </div>
+  </div>
+
+  <div class="Validation-Matiere" >
+    <h5>Validation Par Matiere</h5>
+    <div class="underline2"></div>
+   <div>
+  <ng-container *ngIf="countMatiereP !== undefined" >
+    <p class="noRes">{{ countMatiereP }} %</p>
+  </ng-container>
+  <ng-container  *ngIf="countMatiereP === undefined">
+    <p class="noRes">%</p>
+  </ng-container>
+</div>
+
+</div>
+
+
+</footer>
 </div>

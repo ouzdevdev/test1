@@ -1,4 +1,127 @@
-// .card{
-//   align-items: center;
+.container{
+  background-image: url("../../../assets/Nature Website/img/students.jpg");
+  background-size:cover;
+  background-position: bottom center;
+  height: 100%;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+  gap: 20px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  background-image: url("../../../assets/Nature Website/img/gridimage.jpg");
+  color: white;
+  overflow: hidden;
+}
 
-// }
+
+.list-group-item{
+  overflow-x: auto;
+  transition: transform 0.5s ease-in-out;
+}
+.list-group-item:hover{
+  transform: scale(1.1);
+}
+.title{
+  // border: solid;
+  display: flex;
+  justify-content: center;
+  color: var(--secondary);
+}
+.p-group{
+  font-size: 20px;
+  display: flex;
+}
+.p-group .title-li{
+  width: 150px;
+  font-size: 20px;
+  color: whitesmoke;
+}
+.form-matiere{
+  display: flex;
+  gap: 15px;
+}
+.student-infos{
+  display: flex;
+  gap: 20px;
+}
+.Student-Count{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+footer{
+  height: 15vh;
+  // border: solid;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.underline{
+  width: 100px;
+  border-bottom: solid 3px yellow;
+}
+.underline2{
+  width: 150px;
+  border-bottom: solid 3px yellow;
+
+}
+
+.noRes{
+  // border: solid;
+  display: flex;
+  justify-content: center;
+}
+.add-form{
+  // border: solid;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+@media all and (max-width: 520px){
+  .container{
+    height: 100vh;
+  }
+  .list{
+    padding: 20px;
+    // font-size: 10px;
+    grid-template-columns: repeat(2, 180px);
+    height: 50vh;
+    overflow:auto;
+
+
+  }
+  .list-group-item{
+    height: 100px;
+    // overflow: auto;
+  }
+
+  footer{
+    height: 20vh;
+    align-items: flex-end;
+  }
+.p-group .title-li{
+  font-size: 12px;
+  color: whitesmoke;
+  // border: solid;
+  width: fit-content;
+}
+
+.p-group p{
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // border: solid;
+  color: whitesmoke;
+}
+}
