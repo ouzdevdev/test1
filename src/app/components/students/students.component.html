@@ -67,6 +67,15 @@
 
 </div>
 
-
+ <ng-container  *ngIf="latitude && longitude !==undefined">
+  <div class="Location">
+    <h5>Location</h5>
+    <div class="underline3"></div>
+    <div>
+      <p class="noRes">{{latitude}} , {{longitude}}</p>
+    </div>
+  </div>
+ </ng-container>
 </footer>
 </div>
+

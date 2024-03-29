@@ -11,11 +11,14 @@ export class StudentsComponent implements OnInit {
   count !:any;
   countMatiereP !:any;
   matiere!:any;
+  latitude!:any;
+  longitude!:any;
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
     this.fetchStudents();
     this.fetchCount();
+    this.getLocation();
 
   }
 
@@ -46,4 +49,23 @@ export class StudentsComponent implements OnInit {
         }
       )
     }
+
+
+    getLocation(): void {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position: GeolocationPosition) => {
+          // { this.latitude, this.longitude } = position.coords;
+          this.latitude = position.coords.latitude;
+          this.longitude = position.coords.longitude;
+        },
+        (error) => {
+          console.error('Error getting geolocation:', error);
+        }
+      );
+    } else {
+      console.error('Geolocation is not supported by this browser.');
+    }
+  }
+
 }

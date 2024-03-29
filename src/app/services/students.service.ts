@@ -8,7 +8,7 @@ import { Student } from '../modules/student';
 })
 export class StudentsService {
 
-  private baseUrl = 'http://192.168.11.108:3000/api/v1/students/';
+  private baseUrl = 'http://localhost:3000/api/v1/students/';
   matiere!:string;
   constructor(private http: HttpClient) { }
 
