@@ -8,18 +8,19 @@ import { StudentsService } from '../../services/students.service';
 })
 export class StudentsComponent implements OnInit {
   students: any;
-  count !:any;
-  countMatiereP !:any;
-  matiere!:any;
-  latitude!:any;
-  longitude!:any;
+  count!: any;
+  countMatiereP!: any;
+  matiere!: any;
+  latitude!: any;
+  longitude!: any;
+  locationError: string | null = null;
+
   constructor(private studentsService: StudentsService) {}
 
   ngOnInit(): void {
     this.fetchStudents();
     this.fetchCount();
     this.getLocation();
-
   }
 
   fetchStudents() {
@@ -34,38 +35,37 @@ export class StudentsComponent implements OnInit {
     );
   }
 
-   fetchCount(){
-      this.studentsService.fetchcount().subscribe(
-        (data)=>{
-          this.count = data;
-        }
-      )
-    }
+  fetchCount() {
+    this.studentsService.fetchcount().subscribe(
+      (data) => {
+        this.count = data;
+      }
+    );
+  }
 
-    fetchCountMatiere(){
-      this.studentsService.fetchCountMatiere(this.matiere).subscribe(
-        (data)=>{
-          this.countMatiereP=data;
-        }
-      )
-    }
+  fetchCountMatiere() {
+    this.studentsService.fetchCountMatiere(this.matiere).subscribe(
+      (data) => {
+        this.countMatiereP = data;
+      }
+    );
+  }
 
-
-    getLocation(): void {
+  getLocation(): void {
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(
         (position: GeolocationPosition) => {
-          // { this.latitude, this.longitude } = position.coords;
           this.latitude = position.coords.latitude;
           this.longitude = position.coords.longitude;
         },
         (error) => {
           console.error('Error getting geolocation:', error);
+          this.locationError = 'Please enable location services to use this feature.';
         }
       );
     } else {
       console.error('Geolocation is not supported by this browser.');
+      this.locationError = 'Geolocation is not supported by your browser.';
     }
   }
-
 }
